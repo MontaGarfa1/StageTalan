@@ -1,0 +1,59 @@
+<div [@routerTransition]>
+    <div class="col-md-10 offset-md-1">
+        <div class="col col-sm-8">
+            <div class="card ">
+                <div class="card-header  bg-secondary mb-3">
+                    <strong>KPI CALCULATION</strong>
+                </div>
+                <div class="card-body">
+
+                    <div>
+                        <label class="col-sm-3" for="file">Kpi Config : </label>
+                        <input class="col-sm-5" type="file" accept=".json" id="file" (change)="getKpiConfigDetails($event)" accept=".json">
+                        <div *ngIf="errorKpiConfig">{{message}}</div>
+                    </div>
+                    <div>
+                        <label class="col-sm-3" for="file">Meter : </label>
+                        <input class="col-sm-5" type="file" accept=".json" id="file" (change)="getMeterDetails($event)" accept=".json">
+                        <div *ngIf="errorMeter">{{message}}</div>
+                    </div>
+                    <div>
+                        <label class="col-sm-3" for="file">Demand : </label>
+                        <input class="col-sm-5" type="file" accept=".json" id="file" (change)="getDemandDetails($event)" accept=".json">
+                        <div *ngIf="errorDemand">{{message}}</div>
+
+                    </div>
+                    <div>
+                        <label class="col-sm-3" for="file">Collect Result: </label>
+                        <input class="col-sm-5" type="file" accept=".json" id="file" (change)="getCollectResultDetails($event)" accept=".json">
+                        <div *ngIf="errorCollectResult">{{message}}</div>
+
+                    </div>
+                    <div>
+                        <label class="col-sm-3" for="file">Capability: </label>
+                        <input class="col-sm-5" type="file" accept=".json" id="file" (change)="getCapabilityDetails($event)" accept=".json">
+                        <div *ngIf="errorCapability">{{message}}</div>
+
+                    </div>
+                    <div>
+                        <button (click)="submitedFile()">Submit</button>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <br>
+        <div class="col col-sm-8">
+                    <p>
+                        <ngb-alert *ngIf="add ==1" [type]="alerts[0].type" (close)="closeAlert(alerts[0])">{{ alerts[0].message }}</ngb-alert>
+                    </p>
+                    <p>
+                        <ngb-alert *ngIf="add==2" [type]="alerts[1].type" (close)="closeAlert(alerts[1])">{{ alerts[1].message }}</ngb-alert>
+                    </p>
+        </div>
+    </div>
+</div>

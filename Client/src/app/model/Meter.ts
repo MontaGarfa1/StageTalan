@@ -1,0 +1,23 @@
+export class Meter{
+      meterRID:string;
+      type:string;
+      comType:string;
+      lifeCycleStatus:string;
+      connectivityStatus:string;
+      amrRouter:string;
+      cellId:string;
+      discoveryDate:string;
+      installDate:string;
+      reconcillationDate:string;
+      activationDate:string;
+      removalDate:string;
+      initCapabilityDeadline:string;
+      initCapabilityDate:string;
+      hwVersion:string;
+      fwVersion:string;
+      breakerStatus:string;
+      isExludedFromKpi:boolean;
+      collectGroup:string;
+      signalStrength:string;
+      currentCapaStatus:string;
+} 

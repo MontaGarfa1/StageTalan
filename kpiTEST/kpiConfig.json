@@ -1,0 +1,8 @@
+  {
+    "id": "5b886be1e2fb28bdf68b2c2d",
+    "kpiName": "DD_TCB1",
+    "kpiDescription": "collect5",
+    "periodOfCalculation": 88,
+    "Weight": 73,
+    "serviceLevelTarget": 49
+  }
